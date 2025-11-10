@@ -1,0 +1,15 @@
+# Entorno virtual
+.venv/
+venv/
+
+# Archivos compilados
+__pycache__/
+*.pyc
+*.pyo
+
+# Archivos de entorno y configuración
+.env
+.DS_Store
+
+# Archivos de IDE
+.vscode/
