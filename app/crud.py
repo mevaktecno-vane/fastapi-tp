@@ -2,8 +2,8 @@ from sqlalchemy.orm import Session
 from . import models, schemas
 
 
-def get_products(db: Session):
-    return db.query(models.Product).all()
+def get_products(db: Session, skip: int = 0, limit: int = 10):
+    return db.query(models.Product).offset(skip).limit(limit).all()
 
 
 def get_product(db: Session, product_id: int):
@@ -18,10 +18,10 @@ def create_product(db: Session, product: schemas.ProductCreate):
     return db_product
 
 
-def update_product(db: Session, product_id: int, updated_product: schemas.ProductCreate):
+def update_product(db: Session, product_id: int, product: schemas.ProductCreate):
     db_product = get_product(db, product_id)
     if db_product:
-        for key, value in updated_product.dict().items():
+        for key, value in product.dict().items():
             setattr(db_product, key, value)
         db.commit()
         db.refresh(db_product)
