@@ -11,7 +11,7 @@ def get_product(db: Session, product_id: int):
 
 
 def create_product(db: Session, product: schemas.ProductCreate):
-    db_product = models.Product(**product.dict())
+    db_product = models.Product(**product.model_dump())
     db.add(db_product)
     db.commit()
     db.refresh(db_product)
