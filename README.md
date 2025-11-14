@@ -19,29 +19,7 @@ El objetivo fue construir una API mínima en **FastAPI**, contenerizarla con **D
 ---
 
 ##  Estructura del proyecto
-
-fastapi-tp/
-│
-├── app/
-│ ├── main.py
-│ ├── models.py
-│ ├── schemas.py
-│ ├── crud.py
-│ └── database.py
-│
-├── tests/
-│ ├── test_api.py
-│ └── test_validations.py
-│
-├── Dockerfile
-├── docker-compose.yml
-├── .dockerignore
-├── .env
-├── requirements.txt
-└── README.md
-
-
----
+<pre> ```txt fastapi-tp/ ├── app/ │ ├── main.py │ ├── models.py │ ├── schemas.py │ ├── crud.py │ ├── database.py ├── tests/ │ ├── test_api.py │ ├── test_validations.py ├── Dockerfile ├── docker-compose.yml ├── .dockerignore ├── .env ├── requirements.txt └── README.md ``` </pre>
 
 ##  Requisitos previos
 
